@@ -1,0 +1,12 @@
+services:
+  reacher:
+    image: reacherhq/backend:latest
+    container_name: reacher_local
+    restart: always
+    ports:
+      - "8080:8080"
+    environment:
+      RCH__PROXY__HOST: ${MAIL_FLEET_PROXY_HOST}
+      RCH__PROXY__PORT: ${MAIL_FLEET_PROXY_PORT}
+      RCH__PROXY__USERNAME: ${MAIL_FLEET_PROXY_USERNAME}
+      RCH__PROXY__PASSWORD: ${MAIL_FLEET_PROXY_PASSWORD}
