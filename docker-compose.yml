@@ -1,12 +1,98 @@
+version: "3.8"
+
 services:
-  reacher:
-    image: reacherhq/backend:latest
-    container_name: reacher_local
+  rabbitmq:
+    image: rabbitmq:4.0-management
+    container_name: rabbitmq
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    environment:
+      RABBITMQ_DEFAULT_USER: guest
+      RABBITMQ_DEFAULT_PASS: guest
+    healthcheck:
+      test: ["CMD", "rabbitmq-diagnostics", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
     restart: always
+
+  postgres:
+    image: postgres:14
+    container_name: postgres
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: reacher_db
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: always
+
+  http_server:
+    image: reacherhq/backend:latest
+    container_name: http_server
     ports:
       - "8080:8080"
+    depends_on:
+      rabbitmq:
+        condition: service_healthy
+      postgres:
+        condition: service_healthy
     environment:
-      RCH__PROXY__HOST: ${MAIL_FLEET_PROXY_HOST}
-      RCH__PROXY__PORT: ${MAIL_FLEET_PROXY_PORT}
-      RCH__PROXY__USERNAME: ${MAIL_FLEET_PROXY_USERNAME}
-      RCH__PROXY__PASSWORD: ${MAIL_FLEET_PROXY_PASSWORD}
+      RCH__BACKEND_NAME: http_server
+      RUST_LOG: reacher=info
+      RCH__WORKER__ENABLE: "false"
+      RCH__WORKER__RABBITMQ__URL: amqp://guest:guest@rabbitmq:5672
+      RCH__STORAGE__POSTGRES__DB_URL: postgres://postgres:postgres@postgres:5432/reacher_db
+    restart: always
+
+  worker1:
+    image: reacherhq/backend:latest
+    container_name: worker1
+    env_file:
+      - .env
+    ports:
+      - "8081:8080"
+    depends_on:
+      rabbitmq:
+        condition: service_healthy
+      postgres:
+        condition: service_healthy
+    environment:
+      RCH__BACKEND_NAME: worker1
+      RUST_LOG: reacher=info
+      RCH__WORKER__ENABLE: "true"
+      RCH__WORKER__RABBITMQ__URL: amqp://guest:guest@rabbitmq:5672
+      RCH__WORKER__RABBITMQ__CONCURRENCY: 5
+      RCH__STORAGE__POSTGRES__DB_URL: postgres://postgres:postgres@postgres:5432/reacher_db
+      RCH__WORKER__THROTTLE__MAX_REQUESTS_PER_MINUTE: 60
+      RCH__WORKER__THROTTLE__MAX_REQUESTS_PER_DAY: 10000
+    restart: always
+
+  worker2:
+    image: reacherhq/backend:latest
+    container_name: worker2
+    env_file:
+      - .env
+    ports:
+      - "8082:8080"
+    depends_on:
+      rabbitmq:
+        condition: service_healthy
+      postgres:
+        condition: service_healthy
+    environment:
+      RCH__BACKEND_NAME: worker2
+      RUST_LOG: reacher=info
+      RCH__WORKER__ENABLE: "true"
+      RCH__WORKER__RABBITMQ__URL: amqp://guest:guest@rabbitmq:5672
+      RCH__WORKER__RABBITMQ__CONCURRENCY: 5
+      RCH__STORAGE__POSTGRES__DB_URL: postgres://postgres:postgres@postgres:5432/reacher_db
+      RCH__WORKER__THROTTLE__MAX_REQUESTS_PER_MINUTE: 60
+      RCH__WORKER__THROTTLE__MAX_REQUESTS_PER_DAY: 10000
+    restart: always
