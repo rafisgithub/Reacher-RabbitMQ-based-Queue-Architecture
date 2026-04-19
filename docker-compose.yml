@@ -36,6 +36,8 @@ services:
   http_server:
     image: reacherhq/backend:latest
     container_name: http_server
+    env_file:
+      - .env
     ports:
       - "8080:8080"
     depends_on:
