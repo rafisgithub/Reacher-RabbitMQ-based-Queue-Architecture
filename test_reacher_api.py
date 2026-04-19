@@ -63,34 +63,101 @@ def check_email(email):
             "error": str(e)
         }
 
-def run_load_test():
-    print(f"🚀 Starting load test for {len(emails_to_test)} emails against Reacher API...")
-    start_time = time.time()
-    
+def run_concurrent_batch(emails, concurrency):
+    """Run a batch of email verifications with the given concurrency level."""
+    print(f"\n{'='*55}")
+    print(f"  Concurrency: {concurrency} | Emails: {len(emails)}")
+    print(f"{'='*55}")
+
+    completed = 0
     results = []
-    # Using ThreadPoolExecutor to run requests concurrently. 
-    # max_workers=10 will send 10 requests at a time. Adjust this based on your system capacity.
-    with ThreadPoolExecutor(max_workers=10) as executor:
-        # Map returns results in the order the calls were started
-        for i, result in enumerate(executor.map(check_email, emails_to_test)):
+    start_time = time.time()
+
+    with ThreadPoolExecutor(max_workers=concurrency) as executor:
+        futures = {executor.submit(check_email, email): email for email in emails}
+        for future in futures:
+            result = future.result()
             results.append(result)
-            if (i + 1) % 50 == 0:
-                print(f"✅ Processed {i + 1}/{len(emails_to_test)} emails...")
+            completed += 1
+            status = result.get("is_reachable", result.get("status", "?"))
+            color = (
+                "\033[92m" if status == "safe" else
+                "\033[93m" if status == "risky" else
+                "\033[91m" if status in ("invalid", "exception") else
+                "\033[90m"
+            )
+            print(f"  [{completed:>3}/{len(emails)}] {result['email']:<45} {color}{status}\033[0m")
 
-    end_time = time.time()
-    total_time = end_time - start_time
-    print(f"🎉 Testing completed! Took {total_time:.2f} seconds.")
+    elapsed = time.time() - start_time
 
-    # Save to JSON
-    output_file = "reacher_test_results.json"
-    with open(output_file, "w") as f:
-        json.dump(results, f, indent=4)
-        
-    print(f"📄 Results saved to {output_file}")
+    success   = sum(1 for r in results if r.get("status") == "success")
+    errors    = sum(1 for r in results if r.get("status") != "success")
+    reachable = {k: sum(1 for r in results if r.get("is_reachable") == k)
+                 for k in ("safe", "risky", "invalid", "unknown")}
+    durations = [r["duration_secs"] for r in results if r.get("duration_secs") is not None]
+    avg_dur   = sum(durations) / len(durations) if durations else 0
 
-    # Print summary
-    success_count = sum(1 for r in results if r["status"] == "success")
-    print(f"\n📊 Summary: {success_count} successful API calls out of {len(results)}")
+    print(f"\n  --- Results (concurrency={concurrency}) ---")
+    print(f"  Total time  : {elapsed:.2f}s")
+    print(f"  Throughput  : {len(emails)/elapsed:.2f} req/s")
+    print(f"  Avg duration: {avg_dur:.2f}s per email")
+    print(f"  Success     : {success}  |  Errors: {errors}")
+    print(f"  safe={reachable['safe']}  risky={reachable['risky']}  "
+          f"invalid={reachable['invalid']}  unknown={reachable['unknown']}")
+
+    return {
+        "concurrency": concurrency,
+        "total_emails": len(emails),
+        "total_time_secs": round(elapsed, 3),
+        "throughput_req_per_sec": round(len(emails) / elapsed, 3),
+        "avg_duration_secs": round(avg_dur, 3),
+        "success": success,
+        "errors": errors,
+        "reachability": reachable,
+        "results": results,
+    }
+
+
+def run_load_test():
+    if not emails_to_test:
+        print("No emails to test.")
+        return
+
+    all_output = {}
+
+    # --- 50 concurrent ---
+    batch_50 = (emails_to_test * ((50 // len(emails_to_test)) + 1))[:50]
+    all_output["concurrency_50"] = run_concurrent_batch(batch_50, concurrency=50)
+
+    print("\n⏳ Cooling down 5 seconds before next batch...\n")
+    time.sleep(5)
+
+    # --- 100 concurrent ---
+    batch_100 = (emails_to_test * ((100 // len(emails_to_test)) + 1))[:100]
+    all_output["concurrency_100"] = run_concurrent_batch(batch_100, concurrency=100)
+
+    # Save full output
+    output_file = "reacher_load_test_results_test.json"
+    with open(output_file, "w", encoding="utf-8") as f:
+        json.dump(all_output, f, indent=2, ensure_ascii=False)
+
+    print(f"\n✅ All results saved to {output_file}")
+
+    # Comparison table
+    print(f"\n{'='*55}")
+    print(f"  {'Metric':<30} {'50 conc':>10} {'100 conc':>10}")
+    print(f"{'='*55}")
+    for key, label in [
+        ("total_time_secs",        "Total time (s)"),
+        ("throughput_req_per_sec", "Throughput (req/s)"),
+        ("avg_duration_secs",      "Avg duration (s)"),
+        ("errors",                 "Errors"),
+    ]:
+        v50  = all_output["concurrency_50"][key]
+        v100 = all_output["concurrency_100"][key]
+        print(f"  {label:<30} {str(v50):>10} {str(v100):>10}")
+    print(f"{'='*55}\n")
+
 
 if __name__ == "__main__":
     run_load_test()
