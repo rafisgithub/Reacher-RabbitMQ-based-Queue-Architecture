@@ -47,7 +47,7 @@ services:
         condition: service_healthy
     environment:
       RCH__BACKEND_NAME: http_server
-      RUST_LOG: reacher=info
+      RUST_LOG: reacher=debug
       RCH__WORKER__ENABLE: "false"
       RCH__WORKER__RABBITMQ__URL: amqp://guest:guest@rabbitmq:5672
       RCH__STORAGE__POSTGRES__DB_URL: postgres://postgres:postgres@postgres:5432/reacher_db
@@ -67,13 +67,13 @@ services:
         condition: service_healthy
     environment:
       RCH__BACKEND_NAME: worker1
-      RUST_LOG: reacher=info
+      RUST_LOG: reacher=debug
       RCH__WORKER__ENABLE: "true"
       RCH__WORKER__RABBITMQ__URL: amqp://guest:guest@rabbitmq:5672
-      RCH__WORKER__RABBITMQ__CONCURRENCY: 5
+      RCH__WORKER__RABBITMQ__CONCURRENCY: 10
       RCH__STORAGE__POSTGRES__DB_URL: postgres://postgres:postgres@postgres:5432/reacher_db
-      RCH__WORKER__THROTTLE__MAX_REQUESTS_PER_MINUTE: 60
-      RCH__WORKER__THROTTLE__MAX_REQUESTS_PER_DAY: 10000
+      RCH__THROTTLE__MAX_REQUESTS_PER_MINUTE: 300
+      RCH__THROTTLE__MAX_REQUESTS_PER_DAY: 50000
     restart: always
 
   worker2:
@@ -90,11 +90,11 @@ services:
         condition: service_healthy
     environment:
       RCH__BACKEND_NAME: worker2
-      RUST_LOG: reacher=info
+      RUST_LOG: reacher=debug
       RCH__WORKER__ENABLE: "true"
       RCH__WORKER__RABBITMQ__URL: amqp://guest:guest@rabbitmq:5672
-      RCH__WORKER__RABBITMQ__CONCURRENCY: 5
+      RCH__WORKER__RABBITMQ__CONCURRENCY: 10
       RCH__STORAGE__POSTGRES__DB_URL: postgres://postgres:postgres@postgres:5432/reacher_db
-      RCH__WORKER__THROTTLE__MAX_REQUESTS_PER_MINUTE: 60
-      RCH__WORKER__THROTTLE__MAX_REQUESTS_PER_DAY: 10000
+      RCH__THROTTLE__MAX_REQUESTS_PER_MINUTE: 300
+      RCH__THROTTLE__MAX_REQUESTS_PER_DAY: 50000
     restart: always

@@ -30,7 +30,7 @@ def check_email(email):
     }
     try:
         # Reacher can take a few seconds per email, adding a timeout
-        response = requests.post(API_URL, json=payload, timeout=15)
+        response = requests.post(API_URL, json=payload, timeout=60)
         if response.status_code == 200:
             data = response.json()
             
@@ -47,6 +47,7 @@ def check_email(email):
                 "status": "success",
                 "is_reachable": data.get("is_reachable"),
                 "is_deliverable": data.get("smtp", {}).get("is_deliverable"),
+                "smtp_error": data.get("smtp", {}).get("error"),
                 "proxy_used": proxy_used,
                 "duration_secs": data.get("debug", {}).get("duration", {}).get("secs")
             }

@@ -2,9 +2,9 @@
   "concurrency_50": {
     "concurrency": 50,
     "total_emails": 50,
-    "total_time_secs": 7.066,
-    "throughput_req_per_sec": 7.076,
-    "avg_duration_secs": 2.46,
+    "total_time_secs": 5.395,
+    "throughput_req_per_sec": 9.267,
+    "avg_duration_secs": 1.56,
     "success": 50,
     "errors": 0,
     "reachability": {
@@ -17,16 +17,24 @@
       {
         "email": "rushabh.sheth@docsumo.com",
         "status": "success",
-        "is_reachable": "safe",
-        "is_deliverable": true,
+        "is_reachable": "unknown",
+        "is_deliverable": null,
+        "smtp_error": {
+          "type": "Socks5",
+          "message": "Error with reply: Connection not allowed by ruleset."
+        },
         "proxy_used": "default",
-        "duration_secs": 3
+        "duration_secs": 0
       },
       {
         "email": "dsouthwell@teknorapex.com",
         "status": "success",
         "is_reachable": "unknown",
         "is_deliverable": null,
+        "smtp_error": {
+          "type": "Socks5",
+          "message": "Error with reply: Connection not allowed by ruleset."
+        },
         "proxy_used": "default",
         "duration_secs": 0
       },
@@ -35,22 +43,31 @@
         "status": "success",
         "is_reachable": "unknown",
         "is_deliverable": null,
+        "smtp_error": {
+          "type": "Socks5",
+          "message": "Error with reply: Connection not allowed by ruleset."
+        },
         "proxy_used": "default",
         "duration_secs": 0
       },
       {
         "email": "kbeal@wje.com",
         "status": "success",
-        "is_reachable": "unknown",
-        "is_deliverable": null,
+        "is_reachable": "safe",
+        "is_deliverable": true,
+        "smtp_error": null,
         "proxy_used": "default",
-        "duration_secs": 0
+        "duration_secs": 5
       },
       {
         "email": "cbenek@qespavements.com",
         "status": "success",
         "is_reachable": "unknown",
         "is_deliverable": null,
+        "smtp_error": {
+          "type": "Socks5",
+          "message": "Error with reply: Connection not allowed by ruleset."
+        },
         "proxy_used": "default",
         "duration_secs": 0
       },
@@ -59,62 +76,94 @@
         "status": "success",
         "is_reachable": "unknown",
         "is_deliverable": null,
+        "smtp_error": {
+          "type": "Socks5",
+          "message": "Error with reply: Connection not allowed by ruleset."
+        },
         "proxy_used": "default",
         "duration_secs": 0
       },
       {
         "email": "tammy.richardson@kohler.com",
         "status": "success",
-        "is_reachable": "risky",
-        "is_deliverable": true,
+        "is_reachable": "unknown",
+        "is_deliverable": null,
+        "smtp_error": {
+          "type": "Socks5",
+          "message": "Error with reply: Connection not allowed by ruleset."
+        },
         "proxy_used": "default",
-        "duration_secs": 4
+        "duration_secs": 0
       },
       {
         "email": "sflanery@spencerfane.com",
         "status": "success",
-        "is_reachable": "safe",
-        "is_deliverable": true,
+        "is_reachable": "unknown",
+        "is_deliverable": null,
+        "smtp_error": {
+          "type": "Socks5",
+          "message": "Error with reply: Connection not allowed by ruleset."
+        },
         "proxy_used": "default",
-        "duration_secs": 6
+        "duration_secs": 0
       },
       {
         "email": "cfigueroa@scsengineers.com",
         "status": "success",
         "is_reachable": "unknown",
         "is_deliverable": null,
+        "smtp_error": {
+          "type": "Socks5",
+          "message": "Error with reply: Connection not allowed by ruleset."
+        },
         "proxy_used": "default",
         "duration_secs": 0
       },
       {
         "email": "tpastor@blackstonepc.com",
         "status": "success",
-        "is_reachable": "safe",
-        "is_deliverable": true,
+        "is_reachable": "unknown",
+        "is_deliverable": null,
+        "smtp_error": {
+          "type": "Socks5",
+          "message": "Error with reply: Connection not allowed by ruleset."
+        },
         "proxy_used": "default",
-        "duration_secs": 5
+        "duration_secs": 0
       },
       {
         "email": "rob.king@andritz.com",
         "status": "success",
         "is_reachable": "unknown",
         "is_deliverable": null,
+        "smtp_error": {
+          "type": "Socks5",
+          "message": "Error with reply: Connection not allowed by ruleset."
+        },
         "proxy_used": "default",
         "duration_secs": 0
       },
       {
         "email": "sraschke@schnabel-eng.com",
         "status": "success",
-        "is_reachable": "safe",
-        "is_deliverable": true,
+        "is_reachable": "unknown",
+        "is_deliverable": null,
+        "smtp_error": {
+          "type": "Socks5",
+          "message": "Error with reply: Connection not allowed by ruleset."
+        },
         "proxy_used": "default",
-        "duration_secs": 5
+        "duration_secs": 0
       },
       {
         "email": "amy.cortes@pacificoffice.com",
         "status": "success",
         "is_reachable": "unknown",
         "is_deliverable": null,
+        "smtp_error": {
+          "type": "Socks5",
+          "message": "Error with reply: Connection not allowed by ruleset."
+        },
         "proxy_used": "default",
         "duration_secs": 0
       },
@@ -123,46 +172,61 @@
         "status": "success",
         "is_reachable": "unknown",
         "is_deliverable": null,
+        "smtp_error": {
+          "type": "Socks5",
+          "message": "Error with reply: Connection not allowed by ruleset."
+        },
         "proxy_used": "default",
         "duration_secs": 0
       },
       {
         "email": "rakbar@siemensgamesa.com",
         "status": "success",
-        "is_reachable": "risky",
-        "is_deliverable": true,
+        "is_reachable": "unknown",
+        "is_deliverable": null,
+        "smtp_error": {
+          "type": "Socks5",
+          "message": "Error with reply: Connection not allowed by ruleset."
+        },
         "proxy_used": "default",
-        "duration_secs": 3
+        "duration_secs": 0
       },
       {
         "email": "chin@newyorklife.com",
         "status": "success",
-        "is_reachable": "unknown",
-        "is_deliverable": null,
+        "is_reachable": "risky",
+        "is_deliverable": true,
+        "smtp_error": null,
         "proxy_used": "default",
-        "duration_secs": 0
+        "duration_secs": 2
       },
       {
         "email": "tiara.sumarno@tiffany.com",
         "status": "success",
-        "is_reachable": "unknown",
-        "is_deliverable": null,
+        "is_reachable": "risky",
+        "is_deliverable": true,
+        "smtp_error": null,
         "proxy_used": "default",
-        "duration_secs": 0
+        "duration_secs": 1
       },
       {
         "email": "alex@monster.com",
         "status": "success",
         "is_reachable": "risky",
         "is_deliverable": true,
+        "smtp_error": null,
         "proxy_used": "default",
-        "duration_secs": 5
+        "duration_secs": 4
       },
       {
         "email": "ashanti.jones@celanese.com",
         "status": "success",
         "is_reachable": "unknown",
         "is_deliverable": null,
+        "smtp_error": {
+          "type": "Socks5",
+          "message": "Error with reply: Connection not allowed by ruleset."
+        },
         "proxy_used": "default",
         "duration_secs": 0
       },
@@ -171,6 +235,10 @@
         "status": "success",
         "is_reachable": "unknown",
         "is_deliverable": null,
+        "smtp_error": {
+          "type": "Socks5",
+          "message": "Error with reply: Connection not allowed by ruleset."
+        },
         "proxy_used": "default",
         "duration_secs": 0
       },
@@ -179,6 +247,10 @@
         "status": "success",
         "is_reachable": "unknown",
         "is_deliverable": null,
+        "smtp_error": {
+          "type": "Socks5",
+          "message": "Error with reply: Connection not allowed by ruleset."
+        },
         "proxy_used": "default",
         "duration_secs": 0
       },
@@ -187,166 +259,199 @@
         "status": "success",
         "is_reachable": "unknown",
         "is_deliverable": null,
+        "smtp_error": {
+          "type": "Socks5",
+          "message": "Error with reply: Connection not allowed by ruleset."
+        },
         "proxy_used": "default",
         "duration_secs": 0
       },
       {
         "email": "tmerchant@ridefox.com",
         "status": "success",
-        "is_reachable": "safe",
-        "is_deliverable": true,
+        "is_reachable": "unknown",
+        "is_deliverable": null,
+        "smtp_error": {
+          "type": "Socks5",
+          "message": "Error with reply: Connection not allowed by ruleset."
+        },
         "proxy_used": "default",
-        "duration_secs": 5
+        "duration_secs": 0
       },
       {
         "email": "lbarlow@sager.com",
         "status": "success",
-        "is_reachable": "unknown",
-        "is_deliverable": null,
+        "is_reachable": "safe",
+        "is_deliverable": true,
+        "smtp_error": null,
         "proxy_used": "default",
-        "duration_secs": 2
+        "duration_secs": 4
       },
       {
         "email": "ray.melissa@melissadata.com",
         "status": "success",
-        "is_reachable": "unknown",
-        "is_deliverable": null,
+        "is_reachable": "safe",
+        "is_deliverable": true,
+        "smtp_error": null,
         "proxy_used": "default",
-        "duration_secs": 0
+        "duration_secs": 4
       },
       {
         "email": "karlynne.dennis@relativity.com",
         "status": "success",
         "is_reachable": "unknown",
         "is_deliverable": null,
+        "smtp_error": {
+          "type": "Socks5",
+          "message": "Error with reply: Connection not allowed by ruleset."
+        },
         "proxy_used": "default",
-        "duration_secs": 2
+        "duration_secs": 0
       },
       {
         "email": "faisal.husain@synechron.com",
         "status": "success",
         "is_reachable": "risky",
         "is_deliverable": true,
+        "smtp_error": null,
         "proxy_used": "default",
-        "duration_secs": 4
+        "duration_secs": 2
       },
       {
         "email": "aduczynski@a-zcorp.com",
         "status": "success",
-        "is_reachable": "unknown",
-        "is_deliverable": null,
+        "is_reachable": "safe",
+        "is_deliverable": true,
+        "smtp_error": null,
         "proxy_used": "default",
-        "duration_secs": 0
+        "duration_secs": 4
       },
       {
         "email": "katie.lepper@celanese.com",
         "status": "success",
-        "is_reachable": "risky",
-        "is_deliverable": true,
+        "is_reachable": "unknown",
+        "is_deliverable": null,
+        "smtp_error": {
+          "type": "AsyncSmtpError",
+          "message": "permanent: Blocked - see https://ipcheck.proofpoint.com/?ip=51.38.221.44"
+        },
         "proxy_used": "default",
-        "duration_secs": 4
+        "duration_secs": 1
       },
       {
         "email": "dayna.babb@prysmian.com",
         "status": "success",
         "is_reachable": "risky",
         "is_deliverable": true,
+        "smtp_error": null,
         "proxy_used": "default",
-        "duration_secs": 3
+        "duration_secs": 1
       },
       {
         "email": "mariam.faisal@first-tek.com",
         "status": "success",
         "is_reachable": "safe",
         "is_deliverable": true,
+        "smtp_error": null,
         "proxy_used": "default",
-        "duration_secs": 3
+        "duration_secs": 2
       },
       {
         "email": "jeromee@bollingershipyards.com",
         "status": "success",
         "is_reachable": "safe",
         "is_deliverable": true,
+        "smtp_error": null,
         "proxy_used": "default",
-        "duration_secs": 6
+        "duration_secs": 5
       },
       {
         "email": "jessica.cruz@relativity.com",
         "status": "success",
-        "is_reachable": "unknown",
-        "is_deliverable": null,
+        "is_reachable": "safe",
+        "is_deliverable": true,
+        "smtp_error": null,
         "proxy_used": "default",
-        "duration_secs": 0
+        "duration_secs": 2
       },
       {
         "email": "mbeck@rti-inc.com",
         "status": "success",
         "is_reachable": "safe",
         "is_deliverable": true,
+        "smtp_error": null,
         "proxy_used": "default",
-        "duration_secs": 6
+        "duration_secs": 3
       },
       {
         "email": "courtney.seguin@shawinc.com",
         "status": "success",
         "is_reachable": "risky",
         "is_deliverable": true,
+        "smtp_error": null,
         "proxy_used": "default",
-        "duration_secs": 4
+        "duration_secs": 2
       },
       {
         "email": "adrian.sullivan@worthingtonindustries.com",
         "status": "success",
         "is_reachable": "risky",
         "is_deliverable": true,
+        "smtp_error": null,
         "proxy_used": "default",
-        "duration_secs": 4
+        "duration_secs": 3
       },
       {
         "email": "vijay.pullur@wavemaker.com",
         "status": "success",
         "is_reachable": "safe",
         "is_deliverable": true,
+        "smtp_error": null,
         "proxy_used": "default",
-        "duration_secs": 4
+        "duration_secs": 2
       },
       {
         "email": "myeley@murdochs.com",
         "status": "success",
         "is_reachable": "safe",
         "is_deliverable": true,
+        "smtp_error": null,
         "proxy_used": "default",
-        "duration_secs": 4
+        "duration_secs": 2
       },
       {
         "email": "matthew-s@novami.com",
         "status": "success",
         "is_reachable": "safe",
         "is_deliverable": true,
+        "smtp_error": null,
         "proxy_used": "default",
-        "duration_secs": 3
+        "duration_secs": 2
       },
       {
         "email": "stephanie@newyorklife.com",
         "status": "success",
-        "is_reachable": "unknown",
-        "is_deliverable": null,
+        "is_reachable": "risky",
+        "is_deliverable": true,
+        "smtp_error": null,
         "proxy_used": "default",
-        "duration_secs": 0
+        "duration_secs": 3
       },
       {
         "email": "hande@useinsider.com",
         "status": "success",
         "is_reachable": "risky",
         "is_deliverable": true,
+        "smtp_error": null,
         "proxy_used": "default",
-        "duration_secs": 3
+        "duration_secs": 2
       },
       {
         "email": "rachel.fuller@offitkurman.com",
         "status": "success",
         "is_reachable": "safe",
         "is_deliverable": true,
+        "smtp_error": null,
         "proxy_used": "default",
         "duration_secs": 4
       },
@@ -355,80 +460,88 @@
         "status": "success",
         "is_reachable": "safe",
         "is_deliverable": true,
+        "smtp_error": null,
         "proxy_used": "default",
-        "duration_secs": 4
+        "duration_secs": 2
       },
       {
         "email": "andrew.davies@syniverse.com",
         "status": "success",
         "is_reachable": "risky",
         "is_deliverable": true,
+        "smtp_error": null,
         "proxy_used": "default",
-        "duration_secs": 4
+        "duration_secs": 2
       },
       {
         "email": "staceym@firstam.com",
         "status": "success",
         "is_reachable": "safe",
         "is_deliverable": true,
+        "smtp_error": null,
         "proxy_used": "default",
-        "duration_secs": 3
+        "duration_secs": 2
       },
       {
         "email": "tracy.simmons@vectorcsp.com",
         "status": "success",
         "is_reachable": "safe",
         "is_deliverable": true,
+        "smtp_error": null,
         "proxy_used": "default",
-        "duration_secs": 4
+        "duration_secs": 2
       },
       {
         "email": "csanguinetti@neci.com",
         "status": "success",
         "is_reachable": "safe",
         "is_deliverable": true,
+        "smtp_error": null,
         "proxy_used": "default",
-        "duration_secs": 4
+        "duration_secs": 2
       },
       {
         "email": "connie.coopman@arconic.com",
         "status": "success",
         "is_reachable": "safe",
         "is_deliverable": true,
+        "smtp_error": null,
         "proxy_used": "default",
-        "duration_secs": 4
+        "duration_secs": 3
       },
       {
         "email": "john.hayes@ihsmarkit.com",
         "status": "success",
         "is_reachable": "risky",
         "is_deliverable": true,
+        "smtp_error": null,
         "proxy_used": "default",
-        "duration_secs": 4
+        "duration_secs": 2
       },
       {
         "email": "jstowe@sjhamill.com",
         "status": "success",
         "is_reachable": "safe",
         "is_deliverable": true,
+        "smtp_error": null,
         "proxy_used": "default",
-        "duration_secs": 4
+        "duration_secs": 3
       }
     ]
   },
   "concurrency_100": {
     "concurrency": 100,
     "total_emails": 100,
-    "total_time_secs": 6.125,
-    "throughput_req_per_sec": 16.326,
-    "avg_duration_secs": 1.24,
+    "total_time_secs": 4.982,
+    "throughput_req_per_sec": 20.07,
+    "avg_duration_secs": 0.82,
     "success": 100,
     "errors": 0,
     "reachability": {
-      "safe": 16,
-      "risky": 11,
+      "safe": 18,
+      "risky": 10,
       "invalid": 0,
-      "unknown": 73
+      "unknown": 72
     },
     "results": [
       {
@@ -436,6 +549,10 @@
         "status": "success",
         "is_reachable": "unknown",
         "is_deliverable": null,
+        "smtp_error": {
+          "type": "Socks5",
+          "message": "Error with reply: Connection not allowed by ruleset."
+        },
         "proxy_used": "default",
         "duration_secs": 0
       },
@@ -444,6 +561,10 @@
         "status": "success",
         "is_reachable": "unknown",
         "is_deliverable": null,
+        "smtp_error": {
+          "type": "Socks5",
+          "message": "Error with reply: Connection not allowed by ruleset."
+        },
         "proxy_used": "default",
         "duration_secs": 0
       },
@@ -452,6 +573,10 @@
         "status": "success",
         "is_reachable": "unknown",
         "is_deliverable": null,
+        "smtp_error": {
+          "type": "Socks5",
+          "message": "Error with reply: Connection not allowed by ruleset."
+        },
         "proxy_used": "default",
         "duration_secs": 0
       },
@@ -460,6 +585,10 @@
         "status": "success",
         "is_reachable": "unknown",
         "is_deliverable": null,
+        "smtp_error": {
+          "type": "Socks5",
+          "message": "Error with reply: Connection not allowed by ruleset."
+        },
         "proxy_used": "default",
         "duration_secs": 0
       },
@@ -468,14 +597,22 @@
         "status": "success",
         "is_reachable": "unknown",
         "is_deliverable": null,
+        "smtp_error": {
+          "type": "Socks5",
+          "message": "Error with reply: Connection not allowed by ruleset."
+        },
         "proxy_used": "default",
-        "duration_secs": 2
+        "duration_secs": 0
       },
       {
         "email": "wayne.pekar@univarsolutions.com",
         "status": "success",
         "is_reachable": "unknown",
         "is_deliverable": null,
+        "smtp_error": {
+          "type": "Socks5",
+          "message": "Error with reply: Connection not allowed by ruleset."
+        },
         "proxy_used": "default",
         "duration_secs": 0
       },
@@ -484,6 +621,10 @@
         "status": "success",
         "is_reachable": "unknown",
         "is_deliverable": null,
+        "smtp_error": {
+          "type": "Socks5",
+          "message": "Error with reply: Connection not allowed by ruleset."
+        },
         "proxy_used": "default",
         "duration_secs": 0
       },
@@ -492,6 +633,10 @@
         "status": "success",
         "is_reachable": "unknown",
         "is_deliverable": null,
+        "smtp_error": {
+          "type": "Socks5",
+          "message": "Error with reply: Connection not allowed by ruleset."
+        },
         "proxy_used": "default",
         "duration_secs": 0
       },
@@ -500,6 +645,10 @@
         "status": "success",
         "is_reachable": "unknown",
         "is_deliverable": null,
+        "smtp_error": {
+          "type": "Socks5",
+          "message": "Error with reply: Connection not allowed by ruleset."
+        },
         "proxy_used": "default",
         "duration_secs": 0
       },
@@ -508,38 +657,49 @@
         "status": "success",
         "is_reachable": "unknown",
         "is_deliverable": null,
+        "smtp_error": {
+          "type": "Socks5",
+          "message": "Error with reply: Connection not allowed by ruleset."
+        },
         "proxy_used": "default",
         "duration_secs": 0
       },
       {
         "email": "rob.king@andritz.com",
         "status": "success",
-        "is_reachable": "unknown",
-        "is_deliverable": null,
+        "is_reachable": "risky",
+        "is_deliverable": true,
+        "smtp_error": null,
         "proxy_used": "default",
-        "duration_secs": 0
+        "duration_secs": 2
       },
       {
         "email": "sraschke@schnabel-eng.com",
         "status": "success",
-        "is_reachable": "unknown",
-        "is_deliverable": null,
+        "is_reachable": "safe",
+        "is_deliverable": true,
+        "smtp_error": null,
         "proxy_used": "default",
-        "duration_secs": 0
+        "duration_secs": 3
       },
       {
         "email": "amy.cortes@pacificoffice.com",
         "status": "success",
-        "is_reachable": "unknown",
-        "is_deliverable": null,
+        "is_reachable": "safe",
+        "is_deliverable": true,
+        "smtp_error": null,
         "proxy_used": "default",
-        "duration_secs": 0
+        "duration_secs": 4
       },
       {
         "email": "jordan@sjhamill.com",
         "status": "success",
         "is_reachable": "unknown",
         "is_deliverable": null,
+        "smtp_error": {
+          "type": "Socks5",
+          "message": "Error with reply: Connection not allowed by ruleset."
+        },
         "proxy_used": "default",
         "duration_secs": 0
       },
@@ -548,6 +708,10 @@
         "status": "success",
         "is_reachable": "unknown",
         "is_deliverable": null,
+        "smtp_error": {
+          "type": "Socks5",
+          "message": "Error with reply: Connection not allowed by ruleset."
+        },
         "proxy_used": "default",
         "duration_secs": 0
       },
@@ -556,6 +720,10 @@
         "status": "success",
         "is_reachable": "unknown",
         "is_deliverable": null,
+        "smtp_error": {
+          "type": "Socks5",
+          "message": "Error with reply: Connection not allowed by ruleset."
+        },
         "proxy_used": "default",
         "duration_secs": 0
       },
@@ -564,6 +732,10 @@
         "status": "success",
         "is_reachable": "unknown",
         "is_deliverable": null,
+        "smtp_error": {
+          "type": "Socks5",
+          "message": "Error with reply: Connection not allowed by ruleset."
+        },
         "proxy_used": "default",
         "duration_secs": 0
       },
@@ -572,6 +744,10 @@
         "status": "success",
         "is_reachable": "unknown",
         "is_deliverable": null,
+        "smtp_error": {
+          "type": "Socks5",
+          "message": "Error with reply: Connection not allowed by ruleset."
+        },
         "proxy_used": "default",
         "duration_secs": 0
       },
@@ -580,6 +756,10 @@
         "status": "success",
         "is_reachable": "unknown",
         "is_deliverable": null,
+        "smtp_error": {
+          "type": "Socks5",
+          "message": "Error with reply: Connection not allowed by ruleset."
+        },
         "proxy_used": "default",
         "duration_secs": 0
       },
@@ -588,6 +768,10 @@
         "status": "success",
         "is_reachable": "unknown",
         "is_deliverable": null,
+        "smtp_error": {
+          "type": "Socks5",
+          "message": "Error with reply: Connection not allowed by ruleset."
+        },
         "proxy_used": "default",
         "duration_secs": 0
       },
@@ -596,6 +780,10 @@
         "status": "success",
         "is_reachable": "unknown",
         "is_deliverable": null,
+        "smtp_error": {
+          "type": "Socks5",
+          "message": "Error with reply: Connection not allowed by ruleset."
+        },
         "proxy_used": "default",
         "duration_secs": 0
       },
@@ -604,6 +792,10 @@
         "status": "success",
         "is_reachable": "unknown",
         "is_deliverable": null,
+        "smtp_error": {
+          "type": "Socks5",
+          "message": "Error with reply: Connection not allowed by ruleset."
+        },
         "proxy_used": "default",
         "duration_secs": 0
       },
@@ -612,6 +804,10 @@
         "status": "success",
         "is_reachable": "unknown",
         "is_deliverable": null,
+        "smtp_error": {
+          "type": "Socks5",
+          "message": "Error with reply: Connection not allowed by ruleset."
+        },
         "proxy_used": "default",
         "duration_secs": 0
       },
@@ -620,6 +816,10 @@
         "status": "success",
         "is_reachable": "unknown",
         "is_deliverable": null,
+        "smtp_error": {
+          "type": "Socks5",
+          "message": "Error with reply: Connection not allowed by ruleset."
+        },
         "proxy_used": "default",
         "duration_secs": 0
       },
@@ -628,6 +828,10 @@
         "status": "success",
         "is_reachable": "unknown",
         "is_deliverable": null,
+        "smtp_error": {
+          "type": "Socks5",
+          "message": "Error with reply: Connection not allowed by ruleset."
+        },
         "proxy_used": "default",
         "duration_secs": 0
       },
@@ -636,6 +840,10 @@
         "status": "success",
         "is_reachable": "unknown",
         "is_deliverable": null,
+        "smtp_error": {
+          "type": "Socks5",
+          "message": "Error with reply: Connection not allowed by ruleset."
+        },
         "proxy_used": "default",
         "duration_secs": 0
       },
@@ -644,6 +852,10 @@
         "status": "success",
         "is_reachable": "unknown",
         "is_deliverable": null,
+        "smtp_error": {
+          "type": "Socks5",
+          "message": "Error with reply: Connection not allowed by ruleset."
+        },
         "proxy_used": "default",
         "duration_secs": 0
       },
@@ -652,6 +864,10 @@
         "status": "success",
         "is_reachable": "unknown",
         "is_deliverable": null,
+        "smtp_error": {
+          "type": "Socks5",
+          "message": "Error with reply: Connection not allowed by ruleset."
+        },
         "proxy_used": "default",
         "duration_secs": 0
       },
@@ -660,6 +876,10 @@
         "status": "success",
         "is_reachable": "unknown",
         "is_deliverable": null,
+        "smtp_error": {
+          "type": "Socks5",
+          "message": "Error with reply: Connection not allowed by ruleset."
+        },
         "proxy_used": "default",
         "duration_secs": 0
       },
@@ -668,6 +888,10 @@
         "status": "success",
         "is_reachable": "unknown",
         "is_deliverable": null,
+        "smtp_error": {
+          "type": "Socks5",
+          "message": "Error with reply: Connection not allowed by ruleset."
+        },
         "proxy_used": "default",
         "duration_secs": 0
       },
@@ -676,6 +900,10 @@
         "status": "success",
         "is_reachable": "unknown",
         "is_deliverable": null,
+        "smtp_error": {
+          "type": "Socks5",
+          "message": "Error with reply: Connection not allowed by ruleset."
+        },
         "proxy_used": "default",
         "duration_secs": 0
       },
@@ -684,6 +912,10 @@
         "status": "success",
         "is_reachable": "unknown",
         "is_deliverable": null,
+        "smtp_error": {
+          "type": "Socks5",
+          "message": "Error with reply: Connection not allowed by ruleset."
+        },
         "proxy_used": "default",
         "duration_secs": 0
       },
@@ -692,6 +924,10 @@
         "status": "success",
         "is_reachable": "unknown",
         "is_deliverable": null,
+        "smtp_error": {
+          "type": "Socks5",
+          "message": "Error with reply: Connection not allowed by ruleset."
+        },
         "proxy_used": "default",
         "duration_secs": 0
       },
@@ -700,6 +936,10 @@
         "status": "success",
         "is_reachable": "unknown",
         "is_deliverable": null,
+        "smtp_error": {
+          "type": "Socks5",
+          "message": "Error with reply: Connection not allowed by ruleset."
+        },
         "proxy_used": "default",
         "duration_secs": 0
       },
@@ -708,6 +948,10 @@
         "status": "success",
         "is_reachable": "unknown",
         "is_deliverable": null,
+        "smtp_error": {
+          "type": "Socks5",
+          "message": "Error with reply: Connection not allowed by ruleset."
+        },
         "proxy_used": "default",
         "duration_secs": 0
       },
@@ -716,6 +960,10 @@
         "status": "success",
         "is_reachable": "unknown",
         "is_deliverable": null,
+        "smtp_error": {
+          "type": "Socks5",
+          "message": "Error with reply: Connection not allowed by ruleset."
+        },
         "proxy_used": "default",
         "duration_secs": 0
       },
@@ -724,6 +972,10 @@
         "status": "success",
         "is_reachable": "unknown",
         "is_deliverable": null,
+        "smtp_error": {
+          "type": "Socks5",
+          "message": "Error with reply: Connection not allowed by ruleset."
+        },
         "proxy_used": "default",
         "duration_secs": 0
       },
@@ -732,6 +984,10 @@
         "status": "success",
         "is_reachable": "unknown",
         "is_deliverable": null,
+        "smtp_error": {
+          "type": "Socks5",
+          "message": "Error with reply: Connection not allowed by ruleset."
+        },
         "proxy_used": "default",
         "duration_secs": 0
       },
@@ -740,6 +996,10 @@
         "status": "success",
         "is_reachable": "unknown",
         "is_deliverable": null,
+        "smtp_error": {
+          "type": "Socks5",
+          "message": "Error with reply: Connection not allowed by ruleset."
+        },
         "proxy_used": "default",
         "duration_secs": 0
       },
@@ -748,6 +1008,10 @@
         "status": "success",
         "is_reachable": "unknown",
         "is_deliverable": null,
+        "smtp_error": {
+          "type": "Socks5",
+          "message": "Error with reply: Connection not allowed by ruleset."
+        },
         "proxy_used": "default",
         "duration_secs": 0
       },
@@ -756,6 +1020,10 @@
         "status": "success",
         "is_reachable": "unknown",
         "is_deliverable": null,
+        "smtp_error": {
+          "type": "Socks5",
+          "message": "Error with reply: Connection not allowed by ruleset."
+        },
         "proxy_used": "default",
         "duration_secs": 0
       },
@@ -764,6 +1032,10 @@
         "status": "success",
         "is_reachable": "unknown",
         "is_deliverable": null,
+        "smtp_error": {
+          "type": "Socks5",
+          "message": "Error with reply: Connection not allowed by ruleset."
+        },
         "proxy_used": "default",
         "duration_secs": 0
       },
@@ -772,6 +1044,10 @@
         "status": "success",
         "is_reachable": "unknown",
         "is_deliverable": null,
+        "smtp_error": {
+          "type": "Socks5",
+          "message": "Error with reply: Connection not allowed by ruleset."
+        },
         "proxy_used": "default",
         "duration_secs": 0
       },
@@ -780,6 +1056,10 @@
         "status": "success",
         "is_reachable": "unknown",
         "is_deliverable": null,
+        "smtp_error": {
+          "type": "Socks5",
+          "message": "Error with reply: Connection not allowed by ruleset."
+        },
         "proxy_used": "default",
         "duration_secs": 0
       },
@@ -788,6 +1068,10 @@
         "status": "success",
         "is_reachable": "unknown",
         "is_deliverable": null,
+        "smtp_error": {
+          "type": "Socks5",
+          "message": "Error with reply: Connection not allowed by ruleset."
+        },
         "proxy_used": "default",
         "duration_secs": 0
       },
@@ -796,6 +1080,10 @@
         "status": "success",
         "is_reachable": "unknown",
         "is_deliverable": null,
+        "smtp_error": {
+          "type": "Socks5",
+          "message": "Error with reply: Connection not allowed by ruleset."
+        },
         "proxy_used": "default",
         "duration_secs": 0
       },
@@ -804,6 +1092,10 @@
         "status": "success",
         "is_reachable": "unknown",
         "is_deliverable": null,
+        "smtp_error": {
+          "type": "Socks5",
+          "message": "Error with reply: Connection not allowed by ruleset."
+        },
         "proxy_used": "default",
         "duration_secs": 0
       },
@@ -812,14 +1104,22 @@
         "status": "success",
         "is_reachable": "unknown",
         "is_deliverable": null,
+        "smtp_error": {
+          "type": "Socks5",
+          "message": "Error with reply: Connection not allowed by ruleset."
+        },
         "proxy_used": "default",
-        "duration_secs": 2
+        "duration_secs": 0
       },
       {
         "email": "john.hayes@ihsmarkit.com",
         "status": "success",
         "is_reachable": "unknown",
         "is_deliverable": null,
+        "smtp_error": {
+          "type": "Socks5",
+          "message": "Error with reply: Connection not allowed by ruleset."
+        },
         "proxy_used": "default",
         "duration_secs": 0
       },
@@ -828,6 +1128,10 @@
         "status": "success",
         "is_reachable": "unknown",
         "is_deliverable": null,
+        "smtp_error": {
+          "type": "Socks5",
+          "message": "Error with reply: Connection not allowed by ruleset."
+        },
         "proxy_used": "default",
         "duration_secs": 0
       },
@@ -836,6 +1140,10 @@
         "status": "success",
         "is_reachable": "unknown",
         "is_deliverable": null,
+        "smtp_error": {
+          "type": "Socks5",
+          "message": "Error with reply: Connection not allowed by ruleset."
+        },
         "proxy_used": "default",
         "duration_secs": 0
       },
@@ -844,22 +1152,34 @@
         "status": "success",
         "is_reachable": "unknown",
         "is_deliverable": null,
+        "smtp_error": {
+          "type": "Socks5",
+          "message": "Error with reply: Connection not allowed by ruleset."
+        },
         "proxy_used": "default",
-        "duration_secs": 2
+        "duration_secs": 0
       },
       {
         "email": "hadley.moskal@shermco.com",
         "status": "success",
-        "is_reachable": "risky",
-        "is_deliverable": true,
+        "is_reachable": "unknown",
+        "is_deliverable": null,
+        "smtp_error": {
+          "type": "Socks5",
+          "message": "Error with reply: Connection not allowed by ruleset."
+        },
         "proxy_used": "default",
-        "duration_secs": 4
+        "duration_secs": 0
       },
       {
         "email": "amanda@tiffany.com",
         "status": "success",
         "is_reachable": "unknown",
         "is_deliverable": null,
+        "smtp_error": {
+          "type": "Socks5",
+          "message": "Error with reply: Connection not allowed by ruleset."
+        },
         "proxy_used": "default",
         "duration_secs": 0
       },
@@ -868,6 +1188,10 @@
         "status": "success",
         "is_reachable": "unknown",
         "is_deliverable": null,
+        "smtp_error": {
+          "type": "Socks5",
+          "message": "Error with reply: Connection not allowed by ruleset."
+        },
         "proxy_used": "default",
         "duration_secs": 0
       },
@@ -876,22 +1200,34 @@
         "status": "success",
         "is_reachable": "unknown",
         "is_deliverable": null,
+        "smtp_error": {
+          "type": "Socks5",
+          "message": "Error with reply: Connection not allowed by ruleset."
+        },
         "proxy_used": "default",
         "duration_secs": 0
       },
       {
         "email": "blackk@hughes.com",
         "status": "success",
-        "is_reachable": "risky",
-        "is_deliverable": true,
+        "is_reachable": "unknown",
+        "is_deliverable": null,
+        "smtp_error": {
+          "type": "Socks5",
+          "message": "Error with reply: Connection not allowed by ruleset."
+        },
         "proxy_used": "default",
-        "duration_secs": 4
+        "duration_secs": 0
       },
       {
         "email": "mark.rogers@univarsolutions.com",
         "status": "success",
         "is_reachable": "unknown",
         "is_deliverable": null,
+        "smtp_error": {
+          "type": "Socks5",
+          "message": "Error with reply: Connection not allowed by ruleset."
+        },
         "proxy_used": "default",
         "duration_secs": 0
       },
@@ -900,6 +1236,10 @@
         "status": "success",
         "is_reachable": "unknown",
         "is_deliverable": null,
+        "smtp_error": {
+          "type": "Socks5",
+          "message": "Error with reply: Connection not allowed by ruleset."
+        },
         "proxy_used": "default",
         "duration_secs": 0
       },
@@ -908,22 +1248,34 @@
         "status": "success",
         "is_reachable": "unknown",
         "is_deliverable": null,
+        "smtp_error": {
+          "type": "Socks5",
+          "message": "Error with reply: Connection not allowed by ruleset."
+        },
         "proxy_used": "default",
         "duration_secs": 0
       },
       {
         "email": "kim.eggen@seakr.com",
         "status": "success",
-        "is_reachable": "risky",
-        "is_deliverable": true,
+        "is_reachable": "unknown",
+        "is_deliverable": null,
+        "smtp_error": {
+          "type": "Socks5",
+          "message": "Error with reply: Connection not allowed by ruleset."
+        },
         "proxy_used": "default",
-        "duration_secs": 4
+        "duration_secs": 0
       },
       {
         "email": "lryan@rti-inc.com",
         "status": "success",
         "is_reachable": "unknown",
         "is_deliverable": null,
+        "smtp_error": {
+          "type": "Socks5",
+          "message": "Error with reply: Connection not allowed by ruleset."
+        },
         "proxy_used": "default",
         "duration_secs": 0
       },
@@ -932,78 +1284,112 @@
         "status": "success",
         "is_reachable": "unknown",
         "is_deliverable": null,
+        "smtp_error": {
+          "type": "Socks5",
+          "message": "Error with reply: Connection not allowed by ruleset."
+        },
         "proxy_used": "default",
-        "duration_secs": 2
+        "duration_secs": 0
       },
       {
         "email": "r@mhiahq.com",
         "status": "success",
-        "is_reachable": "risky",
-        "is_deliverable": true,
+        "is_reachable": "unknown",
+        "is_deliverable": null,
+        "smtp_error": {
+          "type": "Socks5",
+          "message": "Error with reply: Connection not allowed by ruleset."
+        },
         "proxy_used": "default",
-        "duration_secs": 4
+        "duration_secs": 0
       },
       {
         "email": "tbrown@allensworthlaw.com",
         "status": "success",
-        "is_reachable": "safe",
-        "is_deliverable": true,
+        "is_reachable": "unknown",
+        "is_deliverable": null,
+        "smtp_error": {
+          "type": "Socks5",
+          "message": "Error with reply: Connection not allowed by ruleset."
+        },
         "proxy_used": "default",
-        "duration_secs": 4
+        "duration_secs": 0
       },
       {
         "email": "jonesj@thyssenkrupp.com",
         "status": "success",
-        "is_reachable": "risky",
-        "is_deliverable": true,
+        "is_reachable": "unknown",
+        "is_deliverable": null,
+        "smtp_error": {
+          "type": "Socks5",
+          "message": "Error with reply: Connection not allowed by ruleset."
+        },
         "proxy_used": "default",
-        "duration_secs": 3
+        "duration_secs": 0
       },
       {
         "email": "michael@monster.com",
         "status": "success",
         "is_reachable": "unknown",
         "is_deliverable": null,
+        "smtp_error": {
+          "type": "Socks5",
+          "message": "Error with reply: Connection not allowed by ruleset."
+        },
         "proxy_used": "default",
         "duration_secs": 0
       },
       {
         "email": "tracie.hempel@mail.nidec.com",
         "status": "success",
-        "is_reachable": "risky",
-        "is_deliverable": true,
-        "proxy_used": "default",
-        "duration_secs": 4
-      },
-      {
-        "email": "julie.venti@simplot.com",
-        "status": "success",
         "is_reachable": "unknown",
         "is_deliverable": null,
+        "smtp_error": {
+          "type": "Socks5",
+          "message": "Error with reply: Connection not allowed by ruleset."
+        },
         "proxy_used": "default",
         "duration_secs": 0
       },
       {
+        "email": "julie.venti@simplot.com",
+        "status": "success",
+        "is_reachable": "risky",
+        "is_deliverable": true,
+        "smtp_error": null,
+        "proxy_used": "default",
+        "duration_secs": 2
+      },
+      {
         "email": "klaurent@proenergyservices.com",
         "status": "success",
-        "is_reachable": "safe",
-        "is_deliverable": true,
+        "is_reachable": "unknown",
+        "is_deliverable": null,
+        "smtp_error": {
+          "type": "Socks5",
+          "message": "Error with reply: Connection not allowed by ruleset."
+        },
         "proxy_used": "default",
-        "duration_secs": 5
+        "duration_secs": 0
       },
       {
         "email": "jessicahopkins@winn-marion.com",
         "status": "success",
         "is_reachable": "safe",
         "is_deliverable": true,
+        "smtp_error": null,
         "proxy_used": "default",
-        "duration_secs": 5
+        "duration_secs": 3
       },
       {
         "email": "delaney@newyorklife.com",
         "status": "success",
         "is_reachable": "unknown",
         "is_deliverable": null,
+        "smtp_error": {
+          "type": "Socks5",
+          "message": "Error with reply: Connection not allowed by ruleset."
+        },
         "proxy_used": "default",
         "duration_secs": 0
       },
@@ -1012,126 +1398,157 @@
         "status": "success",
         "is_reachable": "safe",
         "is_deliverable": true,
+        "smtp_error": null,
         "proxy_used": "default",
-        "duration_secs": 5
+        "duration_secs": 4
       },
       {
         "email": "ewall@outsetmedical.com",
         "status": "success",
-        "is_reachable": "safe",
-        "is_deliverable": true,
+        "is_reachable": "unknown",
+        "is_deliverable": null,
+        "smtp_error": {
+          "type": "Socks5",
+          "message": "Error with reply: Connection not allowed by ruleset."
+        },
         "proxy_used": "default",
-        "duration_secs": 5
+        "duration_secs": 0
       },
       {
         "email": "rdang@scsengineers.com",
         "status": "success",
-        "is_reachable": "unknown",
-        "is_deliverable": null,
+        "is_reachable": "safe",
+        "is_deliverable": true,
+        "smtp_error": null,
         "proxy_used": "default",
-        "duration_secs": 0
+        "duration_secs": 3
       },
       {
         "email": "tina.livingston@simplot.com",
         "status": "success",
         "is_reachable": "unknown",
         "is_deliverable": null,
+        "smtp_error": {
+          "type": "Socks5",
+          "message": "Error with reply: Connection not allowed by ruleset."
+        },
         "proxy_used": "default",
         "duration_secs": 0
       },
       {
         "email": "cspille@accelevationllc.com",
         "status": "success",
-        "is_reachable": "safe",
-        "is_deliverable": true,
+        "is_reachable": "unknown",
+        "is_deliverable": null,
+        "smtp_error": {
+          "type": "Socks5",
+          "message": "Error with reply: Connection not allowed by ruleset."
+        },
         "proxy_used": "default",
-        "duration_secs": 4
+        "duration_secs": 0
       },
       {
         "email": "rmcgrath@textron.com",
         "status": "success",
-        "is_reachable": "safe",
-        "is_deliverable": true,
+        "is_reachable": "unknown",
+        "is_deliverable": null,
+        "smtp_error": {
+          "type": "Socks5",
+          "message": "Error with reply: Connection not allowed by ruleset."
+        },
         "proxy_used": "default",
-        "duration_secs": 5
+        "duration_secs": 0
       },
       {
         "email": "fcoelho@proenergyservices.com",
         "status": "success",
-        "is_reachable": "unknown",
-        "is_deliverable": null,
+        "is_reachable": "safe",
+        "is_deliverable": true,
+        "smtp_error": null,
         "proxy_used": "default",
-        "duration_secs": 0
+        "duration_secs": 3
       },
       {
         "email": "milind@smartkargo.com",
         "status": "success",
         "is_reachable": "safe",
         "is_deliverable": true,
-        "proxy_used": "default",
-        "duration_secs": 4
-      },
-      {
-        "email": "mryan@allensworthlaw.com",
-        "status": "success",
-        "is_reachable": "unknown",
-        "is_deliverable": null,
-        "proxy_used": "default",
-        "duration_secs": 0
-      },
-      {
-        "email": "nadav@bzigo.com",
-        "status": "success",
-        "is_reachable": "risky",
-        "is_deliverable": true,
+        "smtp_error": null,
         "proxy_used": "default",
         "duration_secs": 3
       },
       {
-        "email": "jennifer.zugel@kohler.com",
+        "email": "mryan@allensworthlaw.com",
+        "status": "success",
+        "is_reachable": "safe",
+        "is_deliverable": true,
+        "smtp_error": null,
+        "proxy_used": "default",
+        "duration_secs": 3
+      },
+      {
+        "email": "nadav@bzigo.com",
         "status": "success",
         "is_reachable": "unknown",
         "is_deliverable": null,
+        "smtp_error": {
+          "type": "Socks5",
+          "message": "Error with reply: Connection not allowed by ruleset."
+        },
         "proxy_used": "default",
         "duration_secs": 0
+      },
+      {
+        "email": "jennifer.zugel@kohler.com",
+        "status": "success",
+        "is_reachable": "risky",
+        "is_deliverable": true,
+        "smtp_error": null,
+        "proxy_used": "default",
+        "duration_secs": 2
       },
       {
         "email": "angela.jackson@hornblower.com",
         "status": "success",
         "is_reachable": "safe",
         "is_deliverable": true,
+        "smtp_error": null,
         "proxy_used": "default",
-        "duration_secs": 5
+        "duration_secs": 4
       },
       {
         "email": "alyons@qualcomm.com",
         "status": "success",
-        "is_reachable": "unknown",
-        "is_deliverable": null,
+        "is_reachable": "risky",
+        "is_deliverable": true,
+        "smtp_error": null,
         "proxy_used": "default",
-        "duration_secs": 0
+        "duration_secs": 3
       },
       {
         "email": "granthamt@wilsonelser.com",
         "status": "success",
-        "is_reachable": "unknown",
-        "is_deliverable": null,
+        "is_reachable": "risky",
+        "is_deliverable": true,
+        "smtp_error": null,
         "proxy_used": "default",
-        "duration_secs": 2
+        "duration_secs": 3
       },
       {
         "email": "lpatterson@astrion.us",
         "status": "success",
         "is_reachable": "safe",
         "is_deliverable": true,
+        "smtp_error": null,
         "proxy_used": "default",
-        "duration_secs": 4
+        "duration_secs": 3
       },
       {
         "email": "cjohnson@shakeshack.com",
         "status": "success",
         "is_reachable": "safe",
         "is_deliverable": true,
+        "smtp_error": null,
         "proxy_used": "default",
         "duration_secs": 4
       },
@@ -1140,96 +1557,108 @@
         "status": "success",
         "is_reachable": "risky",
         "is_deliverable": true,
+        "smtp_error": null,
         "proxy_used": "default",
-        "duration_secs": 4
+        "duration_secs": 3
       },
       {
         "email": "ccampanella@textron.com",
         "status": "success",
         "is_reachable": "safe",
         "is_deliverable": true,
+        "smtp_error": null,
         "proxy_used": "default",
-        "duration_secs": 4
+        "duration_secs": 3
       },
       {
         "email": "eheyden@ssasecurity.com",
         "status": "success",
         "is_reachable": "risky",
         "is_deliverable": true,
+        "smtp_error": null,
         "proxy_used": "default",
-        "duration_secs": 4
+        "duration_secs": 2
       },
       {
         "email": "dstuder@solenis.com",
         "status": "success",
         "is_reachable": "risky",
         "is_deliverable": true,
+        "smtp_error": null,
         "proxy_used": "default",
-        "duration_secs": 4
+        "duration_secs": 2
       },
       {
         "email": "gjohnson@neci.com",
         "status": "success",
-        "is_reachable": "unknown",
-        "is_deliverable": null,
+        "is_reachable": "safe",
+        "is_deliverable": true,
+        "smtp_error": null,
         "proxy_used": "default",
-        "duration_secs": 0
+        "duration_secs": 3
       },
       {
         "email": "michael.findley@nov.com",
         "status": "success",
         "is_reachable": "safe",
         "is_deliverable": true,
+        "smtp_error": null,
         "proxy_used": "default",
-        "duration_secs": 5
+        "duration_secs": 3
       },
       {
         "email": "olivier.padiou@valtech.com",
         "status": "success",
         "is_reachable": "safe",
         "is_deliverable": true,
+        "smtp_error": null,
         "proxy_used": "default",
-        "duration_secs": 4
+        "duration_secs": 2
       },
       {
         "email": "jennifer.ostrer@hornblower.com",
         "status": "success",
         "is_reachable": "safe",
         "is_deliverable": true,
+        "smtp_error": null,
         "proxy_used": "default",
-        "duration_secs": 5
+        "duration_secs": 3
       },
       {
         "email": "natashia.stephens@celanese.com",
         "status": "success",
-        "is_reachable": "unknown",
-        "is_deliverable": null,
+        "is_reachable": "risky",
+        "is_deliverable": true,
+        "smtp_error": null,
         "proxy_used": "default",
-        "duration_secs": 0
+        "duration_secs": 3
       },
       {
         "email": "jprpich@hunatotem.com",
         "status": "success",
         "is_reachable": "safe",
         "is_deliverable": true,
+        "smtp_error": null,
         "proxy_used": "default",
-        "duration_secs": 4
+        "duration_secs": 3
       },
       {
         "email": "shane@fieldinglawgroup.com",
         "status": "success",
-        "is_reachable": "unknown",
-        "is_deliverable": null,
+        "is_reachable": "safe",
+        "is_deliverable": true,
+        "smtp_error": null,
         "proxy_used": "default",
-        "duration_secs": 0
+        "duration_secs": 3
       },
       {
         "email": "myles.wojtasiak@ga-asi.com",
         "status": "success",
         "is_reachable": "risky",
         "is_deliverable": true,
+        "smtp_error": null,
         "proxy_used": "default",
-        "duration_secs": 4
+        "duration_secs": 3
       }
     ]
   }
